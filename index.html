@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Voxel Rush 3D</title>
+    <meta
+      name="description"
+      content="بازی سه‌بعدی موبایل‌محور و وب‌محور با گرافیک واقع‌گرایانه"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="game-shell">
+      <div id="hud">
+        <div class="panel score-panel">
+          <span class="label">امتیاز</span>
+          <span id="score">0</span>
+        </div>
+        <div class="panel best-panel">
+          <span class="label">بهترین</span>
+          <span id="best-score">0</span>
+        </div>
+      </div>
+
+      <div id="start-screen" class="overlay visible">
+        <div class="card">
+          <p class="eyebrow">AI Game Builder</p>
+          <h1>Voxel Rush 3D</h1>
+          <p>
+            یک بازی موبایل‌محور، سه‌بعدی و وب‌محور با تجربه سریع، هیجان‌انگیز و
+            قابل اجرا روی گوشی
+          </p>
+          <button id="start-btn">شروع بازی</button>
+        </div>
+      </div>
+
+      <div id="game-over" class="overlay hidden">
+        <div class="card">
+          <p class="eyebrow">بازی تمام شد</p>
+          <h2>امتیاز نهایی: <span id="final-score">0</span></h2>
+          <button id="restart-btn">دوباره</button>
+        </div>
+      </div>
+
+      <div id="controls" aria-label="کنترل‌های بازی">
+        <button class="touch-btn" id="left-btn" aria-label="چپ">◀</button>
+        <button class="touch-btn" id="jump-btn" aria-label="جهش">▲</button>
+        <button class="touch-btn" id="right-btn" aria-label="راست">▶</button>
+      </div>
+    </div>
+
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
